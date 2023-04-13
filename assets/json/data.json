@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "projcet_code": "1",
+      "project_name": "Hecto Innovation clone",
+      "project_date": "2022.12 (1人 개인 프로젝트)",
+      "project_img": "./img/pro11.png",
+      "project_leftTxt": "Hecto Innovation이라는 페이지를 클론 코딩한 프로젝트입니다",
+      "project_right": [
+        {
+          "project_rightHead1": "Frontend",
+          "project_rightTxt1": "Html, CSS, Javascript, jquery",
+          "project_rightHead2": "기능",
+          "project_rightTxt2": "편의성을 위한 up 버튼<br/>일정 위치 도착하면 반응하여 나타나는 기능<br/>일정 시간마다 바뀌는 이미지, 버튼으로도 작동<br/>모바일 환경에서도 적용되는 반응형 웹",
+          "project_rightHead3": "느낀 점",
+          "project_rightTxt3": "Hecto Innovation이라는 페이지를 클론 코딩한 프로젝트입니다. html, css, javascript를 활용하여 최대한 비슷하게 따라하면서 이론과 약간의 실습으로만 배웠던 프로그래밍 언어를 혼자 생각하면서 적용하며 기초를 다질 수 있었던 시간이였습니다."
+        }
+      ],
+      "project_url": "https://roh96.github.io/clone-coding01/",
+      "git_url": "https://github.com/roh96/clone-coding01"
+    },
+    {
+      "projcet_code": "2",
+      "project_name": "Travello",
+      "project_date": "2023.01 (4人 팀 프로젝트)",
+      "project_img": "./img/pro2.png",
+      "project_leftTxt": "나라를 추천하고 그 안에 3개의 명소와 근처의 음식점과 숙소를 알려주는 사이트를 만든 팀 프로젝트입니다.",
+      "project_right": [
+        {
+          "project_rightHead1": "Frontend",
+          "project_rightTxt1": "Html, CSS, JavaScript, jquery, ajax",
+          "project_rightHead2": "기능",
+          "project_rightTxt2": "메인페이지에 영상이 반복재생되어 생동감을 주는 기능<br/>swiper를 자동으로 움직여 이미지를 바꾸고 그에 맞는 제목이 출력<br/>json에 데이터를 저장해 이벤트에 따라 내용이 달라지는 기능<br/>모바일 환경에서도 적용되는 반응형 웹",
+          "project_rightHead3": "느낀 점",
+          "project_rightTxt3": "첫 팀프로젝트를 하면서 서로 의견을 내면서 하나의 페이지를 만들어가는 와중에 많은 이슈들을 경험해 볼 수 있던 시간이였습니다.<br/>만들기 전 기획 부분에서 무엇을 어떻게 할 것인지를 얼마나 정확하게 잡고 가는지에 따라 작업의 진행도가 많은 차이를 보인다는 것을 경험했습니다.<br/>또한 github를 이용해 협업을 하면서 개인프로젝트를 할때에 비해 github와 조금 더 친해질 수 있던 시간이였습니다."
+        }
+      ],
+      "project_url": "https://team9896.github.io/Project-Trip/",
+      "git_url": "https://github.com/Team9896/Project-Trip"
+    },
+    {
+      "projcet_code": "3",
+      "project_name": "JustSearch",
+      "project_date": "2022.02 (1人 개인 프로젝트)",
+      "project_img": "./img/pro333.png",
+      "project_leftTxt": "최근 영화들과 유명한 영화들을 알려주고 영화를 검색해 볼 수 있는 사이트입니다.",
+      "project_right": [
+        {
+          "project_rightHead1": "Frontend",
+          "project_rightTxt1": " react, axios, css, Html, Javascript",
+          "project_rightHead2": "기능",
+          "project_rightTxt2": "영화 항목을 클릭하면 해당하는 영화로 넘어가는 기능<br/>원하는 단어를 검색하면 그에 맞는 영화들을 출력해주는 기능<br/>swiper로 드래그했을 때 자연스럽게 컨텐츠를 넘기는 기능",
+          "project_rightHead3": "느낀 점",
+          "project_rightTxt3": "react를 이해하는데 어려움이 있어 처음에 많은 시간을 소비했었습니다. 천천히 useState를 통한 상태관리와 useEffect로 변화에따라 화면출력을 바꿔주는 등 react의 기능들을 알아나갔습니다. 또한 첫 api를 이용한 프로젝트로 양질의 데이터를 구할 수 있는 api가 중요하다는 것을 깨달을 수 있던 시간이였습니다."
+        }
+      ],
+      "project_url": "https://web-reactproject01-6g2llfgbzuw5.sel3.cloudtype.app/",
+      "git_url": "https://github.com/roh96/reactProject01"
+    },
+    {
+      "projcet_code": "4",
+      "project_name": "ShowLink",
+      "project_date": "2022.03 (1人 개인 프로젝트)",
+      "project_img": "./img/pro4.png",
+      "project_leftTxt": "공연들의 정보를 알려주고 댓글을 통해 의견을 공유할 수 있는 사이트입니다.",
+      "project_right": [
+        {
+          "project_rightHead1": "Frontend",
+          "project_rightTxt1": " nextjs, axios, css, Html, Javascript",
+          "project_rightHead2": "기능",
+          "project_rightTxt2": "각각 해당하는 장르와 공연상태에 따라 다른 컨텐츠들을 보여주는 버튼<br/>카카오톡api 를 통한 로그인 기능<br/> 로그인시 마이페이지에서 내가 즐겨찾기한 목록들을 볼 수 있는 기능<br/>상세페이지에서 로그인시에만 등록가능한 CRUD를 넣은 댓글기능",
+          "project_rightHead3": "느낀 점",
+          "project_rightTxt3": "앞에 react를 이용한 페이지를 만들며 query로 각각의 정보를 넘겨 다르게 데이터를 출력하는 등 비슷한 구성을 가지고 있어 데이터를 이용하는 것은 문제가 없었지만, 카카오톡 api를 이용하는데 토큰을 가지고 오지 못해 로그인 상태를 잡아내지 못해 로컬스토리지에 정보를 남기는 등 문제 해결을 위해 많은 고민을 했던 시간이였습니다. 또한 mariaDB를 이용해 CRUD 기능을 이용한 페이지입니다."
+        }
+      ],
+      "project_url": "https://port-0-nextjsproject-3a9t2ble82ehp6.sel3.cloudtype.app/",
+      "git_url": "https://github.com/roh96/nextjsProject"
+    },
+    {
+      "projcet_code": "5",
+      "project_name": "Roh’s Portfolio",
+      "project_date": "2023.03~04 (1人 개인 프로젝트)",
+      "project_img": "./img/pro5.png",
+      "project_leftTxt": "프론트엔드 개발자를 꿈꾸는 저를 소개하는 페이지입니다.",
+      "project_right": [
+        {
+          "project_rightHead1": "Frontend",
+          "project_rightTxt1": "nuxtjs, css, Html, Javascript, canvas, json",
+          "project_rightHead2": "기능",
+          "project_rightTxt2": "모바일 환경에서도 적용되는 반응형 웹<br/>웹 표준을 고려한 시멘틱 마크업 설계<br/>메뉴 클릭 시 정보 페이지로 이동 스크롤 기능 개발",
+          "project_rightHead3": "느낀 점",
+          "project_rightTxt3": "포트폴리오 사이트를 제작하면서 내용을 정리하고 그에 맞는 디자인을 고려하였고, 제가 가진 가치관과 그에 맞는 내용들을 담았습니다. 전하고 싶은 내용을 심플하고 적절한 기능을 첨가해 불편함이 없는 사이트로 만들었습니다. "
+        }
+      ],
+      "project_url": "https://roh96.github.io/clone-coding01/",
+      "git_url": "https://github.com/roh96/clone-coding01"
+    }
+  ]
+}
