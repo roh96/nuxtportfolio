@@ -108,7 +108,7 @@
                 </div>
                 <div class="rightBox">
                   <span>취&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 미</span>
-                  <p>ㅇㅇ</p>
+                  <p>준비중</p>
                 </div>
               </div>
             </li>
