@@ -1,0 +1,1808 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body h2 {
+  margin: 0;
+}
+
+:root {
+  --card_width: 48.6%;
+  --row_increment: 10px;
+  --card_border_radius: 16px;
+  --card_small: 11;
+  --card_medium: 13;
+  --card_large: 15;
+}
+
+@-webkit-keyframes openingChild {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes openingChild {
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes bighide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    color: white;
+  }
+}
+@keyframes bighide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    color: white;
+  }
+}
+.moveHide {
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(20%);
+}
+
+.moveUp {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.bodybody {
+  width: 100%;
+}
+.bodybody .headerBox {
+  position: fixed;
+  width: 96%;
+  padding: 10px 2% 0 2%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 100;
+}
+.bodybody .headerBox h1 {
+  margin: 0;
+  padding: 0;
+  top: 3%;
+  left: 20%;
+}
+.bodybody .headerBox > div {
+  display: flex;
+}
+.bodybody .headerBox > div p {
+  display: inline-block;
+  margin-right: 60px;
+}
+.bodybody .headerBox.black {
+  color: black;
+  background-color: #fff;
+}
+.bodybody .visualMain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+}
+.bodybody .visualMain div {
+  margin: 0;
+  color: white;
+  font-size: 36px;
+  position: absolute;
+  z-index: 99;
+  top: 63%;
+  left: 8%;
+  line-height: 62px;
+  pointer-events: none;
+}
+.bodybody .visualMain div p {
+  opacity: 0;
+  margin: 0;
+  transform: translateY(100%);
+}
+.bodybody .visualMain div p.visualMaintxt1 {
+  -webkit-animation: openingChild 1.5s 1s forwards;
+          animation: openingChild 1.5s 1s forwards;
+}
+.bodybody .visualMain div p.visualMaintxt2 {
+  -webkit-animation: openingChild 1.5s 2s forwards;
+          animation: openingChild 1.5s 2s forwards;
+}
+.bodybody .visualMain div p.visualMaintxt3 {
+  -webkit-animation: openingChild 1.5s 3s forwards;
+          animation: openingChild 1.5s 3s forwards;
+}
+.bodybody .about {
+  padding-top: 100px;
+  background-color: #eef2f5;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.bodybody .about > div {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bodybody .about > div h2 {
+  margin: 0;
+  font-size: 36px;
+}
+.bodybody .about > div .listBox {
+  padding-top: 70px;
+  padding-bottom: 45px;
+  position: relative;
+  z-index: 100;
+}
+.bodybody .about > div .listBox ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.bodybody .about > div .listBox ul li {
+  width: 33.3%;
+  display: flex;
+  margin: 0 auto;
+}
+.bodybody .about > div .listBox ul li > div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 40px;
+}
+.bodybody .about > div .listBox ul li > div .leftBox {
+  padding-right: 10px;
+}
+.bodybody .about > div .listBox ul li > div .leftBox span {
+  font-size: 40px;
+}
+.bodybody .about > div .listBox ul li > div .rightBox {
+  text-align: left;
+}
+.bodybody .about > div .listBox ul li > div .rightBox span {
+  display: block;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px 0;
+  font-weight: bold;
+}
+.bodybody .about > div .listBox ul li > div .rightBox p {
+  font-size: 16px;
+  margin: 0;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div > div {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .click {
+  position: relative;
+  cursor: pointer;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .click:before {
+  content: "Click";
+  position: absolute;
+  -webkit-animation: bighide 2s ease-in-out infinite;
+          animation: bighide 2s ease-in-out infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .video {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  padding: 10px 30px 50px;
+  background-color: #888;
+  border-radius: 15px;
+  text-align: right;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .video > p {
+  display: inline-block;
+  font-size: 2rem;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .video .videoBox {
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .video .videoBox video {
+  width: 100%;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .video.modon {
+  display: block;
+}
+.bodybody .about > div .listBox ul li > div .rightBox > div .video .videoTxt {
+  font-size: 20px;
+  padding-top: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+.bodybody .about > div .listBox ul li > div :last-child {
+  padding: 0;
+}
+.bodybody .about > div .aboutBox {
+  font-size: 20px;
+  color: #010101;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.bodybody .skill {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #bbd0e9;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.bodybody .skill > div {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bodybody .skill > div h2 {
+  margin: 0;
+  font-size: 36px;
+}
+.bodybody .skill > div > div {
+  padding-top: 70px;
+  display: grid;
+  gap: 15px 20px;
+  grid-template-columns: repeat(auto-fill, var(--card_width));
+  grid-auto-rows: var(--row_increment);
+  justify-content: center;
+  font-size: 24px;
+}
+.bodybody .skill > div > div h3 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.bodybody .skill > div > div h3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-top: 1px solid #000;
+  height: 1px;
+  width: 100%;
+}
+.bodybody .skill > div > div > div {
+  padding: 20px 30px;
+  font-size: 24px;
+  text-align: left;
+}
+.bodybody .skill > div > div .firstBox {
+  background-color: #fff;
+  border-radius: 16px;
+  order: 1;
+}
+.bodybody .skill > div > div .firstBox > div > div {
+  padding-top: 20px;
+}
+.bodybody .skill > div > div .firstBox > div > div .html {
+  padding-left: 5%;
+  width: 45%;
+}
+.bodybody .skill > div > div .firstBox > div > div .sass {
+  padding: 0 5% 0 10%;
+  width: 20%;
+}
+.bodybody .skill > div > div .firstBox > div > div .jquery {
+  padding-bottom: 4%;
+  width: 40%;
+}
+.bodybody .skill > div > div .firstBox > div > div .next {
+  padding: 0 5% 0 10%;
+  width: 30%;
+}
+.bodybody .skill > div > div .firstBox > div > div .react {
+  padding-bottom: 0;
+  width: 30%;
+}
+.bodybody .skill > div > div .secondBox {
+  background-color: #fff;
+  border-radius: 16px;
+  order: 2;
+}
+.bodybody .skill > div > div .secondBox > div > div {
+  padding-top: 20px;
+}
+.bodybody .skill > div > div .secondBox > div > div .git {
+  padding-right: 50%;
+  padding-bottom: 8px;
+  width: 25%;
+}
+.bodybody .skill > div > div .secondBox > div > div .github {
+  width: 35%;
+}
+.bodybody .skill > div > div .thirdBox {
+  background-color: #fff;
+  border-radius: 16px;
+  order: 4;
+}
+.bodybody .skill > div > div .thirdBox > div > div {
+  padding-top: 20px;
+}
+.bodybody .skill > div > div .thirdBox > div > div .cloud {
+  padding-right: 20%;
+  padding-bottom: 10px;
+  width: 50%;
+}
+.bodybody .skill > div > div .thirdBox > div > div .vercel {
+  width: 40%;
+}
+.bodybody .skill > div > div .fourthBox {
+  background-color: #fff;
+  border-radius: 16px;
+  order: 3;
+}
+.bodybody .skill > div > div .fourthBox > div > div {
+  padding-top: 20px;
+}
+.bodybody .skill > div > div .fourthBox > div > div .zeplin {
+  padding-right: 20%;
+  padding-bottom: 3%;
+  width: 50%;
+}
+.bodybody .skill > div > div .fourthBox > div > div .figma {
+  width: 40%;
+}
+.bodybody .skill > div .card_small {
+  grid-row-end: span var(--card_small);
+}
+.bodybody .skill > div .card_medium {
+  grid-row-end: span var(--card_medium);
+}
+.bodybody .skill > div .card_large {
+  grid-row-end: span var(--card_large);
+}
+.bodybody .project {
+  padding: 100px 0px;
+  background-color: #eef2f5;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.bodybody .project > div {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bodybody .project > div .proH h2 {
+  margin: 0;
+  font-size: 36px;
+}
+.bodybody .project > div .proContainer {
+  margin-top: 70px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.bodybody .project > div .proContainer > div {
+  padding: 60px 50px;
+}
+.bodybody .project > div .proContainer > div h3 {
+  margin: 0;
+  font-size: 28px;
+}
+.bodybody .project > div .proContainer > div .date {
+  padding-top: 7px;
+}
+.bodybody .project > div .proContainer > div .pro {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.bodybody .project > div .proContainer > div .pro .proLeft {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg {
+  width: 100%;
+  height: 72%;
+  background-color: #888;
+}
+.bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.bodybody .project > div .proContainer > div .pro .proLeft .proLeftTxt {
+  margin-top: 8%;
+  padding: 0 15%;
+  height: 20%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodybody .project > div .proContainer > div .pro .proRight {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightHead {
+  font-size: 20px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt {
+  font-size: 16px;
+  color: #555555;
+  text-align: left;
+  padding-bottom: 25px;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut a {
+  text-decoration: none;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut a:visited {
+  color: black;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1 {
+  width: 48%;
+  background-color: #ddd;
+  padding: 2px 0;
+  border-radius: 5px;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1:hover {
+  transition: 0.3s;
+  background-color: #aaa;
+  color: #fff;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2 {
+  width: 48%;
+  background-color: #ddd;
+  padding: 2px 0;
+  border-radius: 5px;
+}
+.bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2:hover {
+  transition: 0.3s;
+  background-color: #aaa;
+  color: #fff;
+}
+.bodybody .footer {
+  background-color: #000;
+  color: #fafafa;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media (min-width: 1023px) and (max-width: 1279px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body h2 {
+    margin: 0;
+  }
+  :root {
+    --card_width: 48.57%;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 10;
+    --card_medium: 12;
+    --card_large: 14;
+  }
+  @-webkit-keyframes openingChild {
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @keyframes openingChild {
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .moveHide {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(20%);
+  }
+  .moveUp {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .bodybody {
+    width: 100%;
+  }
+  .bodybody .headerBox {
+    position: fixed;
+    width: 94%;
+    padding: 10px 3% 0 3%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 101;
+  }
+  .bodybody .headerBox h1 {
+    margin: 0;
+    padding: 0;
+    top: 3%;
+    left: 20%;
+  }
+  .bodybody .headerBox > div {
+    display: flex;
+  }
+  .bodybody .headerBox > div p {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .bodybody .headerBox > div p:last-child {
+    margin-right: 0px;
+  }
+  .bodybody .headerBox.black {
+    color: black;
+    background-color: #fff;
+  }
+  .bodybody .visualMain {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+    position: relative;
+  }
+  .bodybody .visualMain div {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    z-index: 99;
+    bottom: 30%;
+    left: 8%;
+    line-height: 52px;
+    pointer-events: none;
+  }
+  .bodybody .visualMain div p {
+    opacity: 0;
+    margin: 0;
+    transform: translateY(100%);
+  }
+  .bodybody .visualMain div p.visualMaintxt1 {
+    -webkit-animation: openingChild 1.5s 1s forwards;
+            animation: openingChild 1.5s 1s forwards;
+  }
+  .bodybody .visualMain div p.visualMaintxt2 {
+    -webkit-animation: openingChild 1.5s 2s forwards;
+            animation: openingChild 1.5s 2s forwards;
+  }
+  .bodybody .visualMain div p.visualMaintxt3 {
+    -webkit-animation: openingChild 1.5s 3s forwards;
+            animation: openingChild 1.5s 3s forwards;
+  }
+  .bodybody .about {
+    padding: 80px 0;
+    background-color: #eef2f5;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .about > div {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .about > div h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .bodybody .about > div .listBox {
+    padding-top: 55px;
+    padding-bottom: 0px;
+  }
+  .bodybody .about > div .listBox ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .bodybody .about > div .listBox ul li {
+    width: 48%;
+    display: flex;
+    margin: 0 auto;
+    padding-right: 2%;
+  }
+  .bodybody .about > div .listBox ul li > div {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .bodybody .about > div .listBox ul li > div .leftBox {
+    padding-right: 10px;
+  }
+  .bodybody .about > div .listBox ul li > div .leftBox span {
+    font-size: 40px;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox {
+    text-align: left;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox span {
+    display: block;
+    align-items: center;
+    font-size: 20px;
+    padding: 5px 0;
+    font-weight: bold;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox p {
+    font-size: 16px;
+    margin: 0;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox > div .click {
+    padding-left: 0px;
+    font-size: 16px;
+    text-align: left;
+    transform: translateY(10%);
+    margin: 0;
+  }
+  .bodybody .about > div .listBox ul li > div :last-child {
+    padding: 0;
+  }
+  .bodybody .about > div .listBox ul li:last-child {
+    padding-right: 52%;
+  }
+  .bodybody .about > div .aboutBox {
+    font-size: 16px;
+    color: #010101;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  .bodybody .skill {
+    padding: 80px 0;
+    background-color: #bbd0e9;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .skill > div {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .skill > div h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .bodybody .skill > div > div {
+    padding-top: 60px;
+    display: grid;
+    gap: 15px 20px;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+  }
+  .bodybody .skill > div > div h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .bodybody .skill > div > div h3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-top: 1px solid #000;
+    height: 1px;
+    width: 100%;
+  }
+  .bodybody .skill > div > div > div {
+    padding: 20px 25px;
+    font-size: 20px;
+    text-align: left;
+  }
+  .bodybody .skill > div > div .firstBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 1;
+  }
+  .bodybody .skill > div > div .firstBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .html {
+    padding-left: 5%;
+    padding-right: 30%;
+    width: 55%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .sass {
+    padding: 1% 5% 0 5%;
+    width: 25%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .jquery {
+    padding: 0 0 4% 10%;
+    width: 50%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .next {
+    padding: 0 5% 0 5%;
+    width: 35%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .react {
+    padding: 0 0 4% 10%;
+    width: 40%;
+  }
+  .bodybody .skill > div > div .secondBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 2;
+  }
+  .bodybody .skill > div > div .secondBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .secondBox > div > div .git {
+    padding-right: 50%;
+    padding-bottom: 8px;
+    width: 35%;
+  }
+  .bodybody .skill > div > div .secondBox > div > div .github {
+    width: 45%;
+  }
+  .bodybody .skill > div > div .thirdBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 4;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div .cloud {
+    padding-right: 20%;
+    padding-bottom: 10px;
+    width: 60%;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div .vercel {
+    width: 50%;
+  }
+  .bodybody .skill > div > div .fourthBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 3;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div .zeplin {
+    padding-right: 20%;
+    padding-bottom: 3%;
+    width: 60%;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div .figma {
+    width: 50%;
+  }
+  .bodybody .skill > div .card_small {
+    grid-row-end: span var(--card_small);
+  }
+  .bodybody .skill > div .card_medium {
+    grid-row-end: span var(--card_medium);
+  }
+  .bodybody .skill > div .card_large {
+    grid-row-end: span var(--card_large);
+  }
+  .bodybody .project {
+    padding: 80px 0px;
+    background-color: #eef2f5;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .project > div {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .project > div .proH h2 {
+    margin: 0;
+    font-size: 32px;
+  }
+  .bodybody .project > div .proContainer {
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 16px;
+  }
+  .bodybody .project > div .proContainer > div {
+    padding: 40px 30px;
+  }
+  .bodybody .project > div .proContainer > div h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+  .bodybody .project > div .proContainer > div .date {
+    padding-top: 7px;
+    font-size: 15px;
+  }
+  .bodybody .project > div .proContainer > div .pro {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft {
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg {
+    width: 100%;
+    height: 72%;
+    background-color: #888;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg > img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftTxt {
+    margin-top: 8%;
+    padding: 0 11%;
+    height: 20%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftTxt p {
+    margin: 0;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight {
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightHead {
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 8px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt {
+    font-size: 16px;
+    color: #555555;
+    text-align: left;
+    padding-bottom: 14px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt p {
+    margin: 0;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a {
+    text-decoration: none;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a:visited {
+    color: black;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1 {
+    width: 48%;
+    background-color: #ddd;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1:hover {
+    transition: 0.3s;
+    background-color: #aaa;
+    color: #fff;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2 {
+    width: 48%;
+    background-color: #ddd;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2:hover {
+    transition: 0.3s;
+    background-color: #aaa;
+    color: #fff;
+  }
+  .bodybody .footer {
+    background-color: #000;
+    color: #fafafa;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body h2 {
+    margin: 0;
+  }
+  :root {
+    --card_width: 48%;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 8;
+    --card_medium: 9;
+    --card_large: 10;
+  }
+  @-webkit-keyframes openingChild {
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @keyframes openingChild {
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .moveHide {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(20%);
+  }
+  .moveUp {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .bodybody {
+    width: 100%;
+  }
+  .bodybody .headerBox {
+    position: fixed;
+    width: 90%;
+    padding: 10px 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 101;
+  }
+  .bodybody .headerBox h1 {
+    margin: 0;
+    padding: 0;
+    top: 3%;
+    left: 20%;
+  }
+  .bodybody .headerBox > div {
+    display: flex;
+  }
+  .bodybody .headerBox > div p {
+    display: inline-block;
+    margin-right: 50px;
+  }
+  .bodybody .headerBox > div p:last-child {
+    margin-right: 0px;
+  }
+  .bodybody .headerBox.black {
+    color: black;
+    background-color: #fff;
+  }
+  .bodybody .visualMain {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background: #111;
+    position: relative;
+  }
+  .bodybody .visualMain div {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    line-height: 52px;
+    text-align: center;
+    pointer-events: none;
+  }
+  .bodybody .visualMain div p {
+    opacity: 0;
+    margin: 0;
+    transform: translateY(100%);
+  }
+  .bodybody .visualMain div p.visualMaintxt1 {
+    -webkit-animation: openingChild 1.5s 1s forwards;
+            animation: openingChild 1.5s 1s forwards;
+  }
+  .bodybody .visualMain div p.visualMaintxt2 {
+    -webkit-animation: openingChild 1.5s 2s forwards;
+            animation: openingChild 1.5s 2s forwards;
+  }
+  .bodybody .visualMain div p.visualMaintxt3 {
+    -webkit-animation: openingChild 1.5s 3s forwards;
+            animation: openingChild 1.5s 3s forwards;
+  }
+  .bodybody .about {
+    padding: 80px 0;
+    background-color: #eef2f5;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .about > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .about > div h2 {
+    margin: 0;
+    font-size: 36px;
+  }
+  .bodybody .about > div .listBox {
+    padding-top: 55px;
+    padding-bottom: 0px;
+  }
+  .bodybody .about > div .listBox ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .bodybody .about > div .listBox ul li {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .bodybody .about > div .listBox ul li > div {
+    width: 67%;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .bodybody .about > div .listBox ul li > div .leftBox {
+    padding-right: 20px;
+  }
+  .bodybody .about > div .listBox ul li > div .leftBox span {
+    font-size: 40px;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox {
+    text-align: left;
+    display: flex;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox span {
+    display: block;
+    align-items: center;
+    font-size: 24px;
+    padding: 0;
+    font-weight: bold;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox p {
+    padding-left: 20px;
+    font-size: 20px;
+    text-align: right;
+    transform: translateY(10%);
+    margin: 0;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox > div .click {
+    padding-left: 20px;
+    font-size: 16px;
+    text-align: right;
+    transform: translateY(10%);
+    margin: 0;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox > div .video {
+    width: 600px;
+  }
+  .bodybody .about > div .listBox ul li > div :last-child {
+    padding: 0;
+  }
+  .bodybody .about > div .listBox ul li:last-child {
+    padding-right: 0;
+  }
+  .bodybody .about > div .aboutBox {
+    font-size: 20px;
+    color: #010101;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+  .bodybody .skill {
+    padding: 80px 0;
+    background-color: #bbd0e9;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .skill > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .skill > div h2 {
+    margin: 0;
+    font-size: 36px;
+  }
+  .bodybody .skill > div > div {
+    padding-top: 60px;
+    display: grid;
+    gap: 15px 20px;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+  }
+  .bodybody .skill > div > div h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .bodybody .skill > div > div h3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-top: 1px solid #000;
+    height: 1px;
+    width: 100%;
+  }
+  .bodybody .skill > div > div > div {
+    padding: 20px 25px;
+    font-size: 20px;
+    text-align: left;
+  }
+  .bodybody .skill > div > div .firstBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 1;
+  }
+  .bodybody .skill > div > div .firstBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .html {
+    padding-left: 5%;
+    padding-right: 30%;
+    width: 55%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .sass {
+    padding: 1% 5% 0 5%;
+    width: 25%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .jquery {
+    padding: 0 0 4% 10%;
+    width: 50%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .next {
+    padding: 0 5% 0 5%;
+    width: 35%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .react {
+    padding: 0 0 4% 10%;
+    width: 40%;
+  }
+  .bodybody .skill > div > div .secondBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 2;
+  }
+  .bodybody .skill > div > div .secondBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .secondBox > div > div .git {
+    padding-right: 50%;
+    padding-bottom: 8px;
+    width: 35%;
+  }
+  .bodybody .skill > div > div .secondBox > div > div .github {
+    width: 45%;
+  }
+  .bodybody .skill > div > div .thirdBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 4;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div .cloud {
+    padding-right: 20%;
+    padding-bottom: 10px;
+    width: 60%;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div .vercel {
+    width: 50%;
+  }
+  .bodybody .skill > div > div .fourthBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 3;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div .zeplin {
+    padding-right: 20%;
+    padding-bottom: 3%;
+    width: 60%;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div .figma {
+    width: 50%;
+  }
+  .bodybody .skill > div .card_small {
+    grid-row-end: span var(--card_small);
+  }
+  .bodybody .skill > div .card_medium {
+    grid-row-end: span var(--card_medium);
+  }
+  .bodybody .skill > div .card_large {
+    grid-row-end: span var(--card_large);
+  }
+  .bodybody .project {
+    padding: 80px 0px;
+    background-color: #eef2f5;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .project > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .project > div .proH h2 {
+    margin: 0;
+    font-size: 36px;
+  }
+  .bodybody .project > div .proContainer {
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 16px;
+  }
+  .bodybody .project > div .proContainer > div {
+    padding: 40px 30px;
+  }
+  .bodybody .project > div .proContainer > div h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+  .bodybody .project > div .proContainer > div .date {
+    padding-top: 7px;
+    font-size: 15px;
+  }
+  .bodybody .project > div .proContainer > div .pro {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft {
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg {
+    width: 100%;
+    height: 72%;
+    background-color: #fff;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg > img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftTxt {
+    display: none;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightHead {
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 8px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt {
+    font-size: 16px;
+    color: #555555;
+    text-align: left;
+    padding-bottom: 14px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt p {
+    margin: 0;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a {
+    text-decoration: none;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a:visited {
+    color: black;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1 {
+    width: 48%;
+    background-color: #ddd;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1:hover {
+    transition: 0.3s;
+    background-color: #aaa;
+    color: #fff;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2 {
+    width: 48%;
+    background-color: #ddd;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2:hover {
+    transition: 0.3s;
+    background-color: #aaa;
+    color: #fff;
+  }
+  .bodybody .footer {
+    background-color: #000;
+    color: #fafafa;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+}
+@media (min-width: 360px) and (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body h2 {
+    margin: 0;
+  }
+  :root {
+    --card_width: 100%;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 8;
+    --card_medium: 9;
+    --card_large: 10;
+  }
+  @-webkit-keyframes openingChild {
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @keyframes openingChild {
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  .moveHide {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(20%);
+  }
+  .moveUp {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .bodybody {
+    width: 100%;
+  }
+  .bodybody .headerBox {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    z-index: 101;
+  }
+  .bodybody .headerBox h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    text-align: center;
+    padding: 10px 5% 0 5%;
+    top: 0%;
+    left: 0%;
+  }
+  .bodybody .headerBox > div {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    bottom: 0%;
+    text-align: center;
+    background-color: white;
+    color: black;
+  }
+  .bodybody .headerBox > div p {
+    position: relative;
+    display: inline-block;
+    width: 33.3%;
+    margin-right: 0px;
+  }
+  .bodybody .headerBox.black {
+    background-color: transparent;
+  }
+  .bodybody .visualMain {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    background: #111;
+    position: relative;
+  }
+  .bodybody .visualMain div {
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    padding-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 32px;
+    text-align: center;
+    pointer-events: none;
+  }
+  .bodybody .visualMain div p {
+    opacity: 0;
+    margin: 0;
+    transform: translateY(100%);
+  }
+  .bodybody .visualMain div p.visualMaintxt1 {
+    -webkit-animation: openingChild 1.5s 1s forwards;
+            animation: openingChild 1.5s 1s forwards;
+  }
+  .bodybody .visualMain div p.visualMaintxt2 {
+    -webkit-animation: openingChild 1.5s 2s forwards;
+            animation: openingChild 1.5s 2s forwards;
+  }
+  .bodybody .visualMain div p.visualMaintxt3 {
+    -webkit-animation: openingChild 1.5s 3s forwards;
+            animation: openingChild 1.5s 3s forwards;
+  }
+  .bodybody .about {
+    padding: 80px 0;
+    background-color: #eef2f5;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .about > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .about > div h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+  .bodybody .about > div .listBox {
+    margin: 0 auto;
+    width: 270px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+  }
+  .bodybody .about > div .listBox ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .bodybody .about > div .listBox ul li {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .bodybody .about > div .listBox ul li > div {
+    width: 83%;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .bodybody .about > div .listBox ul li > div .leftBox {
+    padding-right: 10px;
+  }
+  .bodybody .about > div .listBox ul li > div .leftBox span {
+    font-size: 36px;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox {
+    text-align: left;
+    display: flex;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox span {
+    display: none;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox p {
+    padding-left: 10px;
+    font-size: 16px;
+    text-align: right;
+    transform: translateY(10%);
+    margin: 0;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox > div .click {
+    padding-left: 10px;
+    font-size: 16px;
+    text-align: right;
+    transform: translateY(10%);
+    margin: 0;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox > div .video {
+    width: 300px;
+    padding: 10px 10px 30px;
+    z-index: 999;
+  }
+  .bodybody .about > div .listBox ul li > div .rightBox > div .video .videoTxt {
+    padding: 20px 10px 0;
+  }
+  .bodybody .about > div .listBox ul li > div :last-child {
+    padding: 0;
+  }
+  .bodybody .about > div .listBox ul li:last-child {
+    padding-right: 0;
+  }
+  .bodybody .about > div .aboutBox {
+    font-size: 16px;
+    color: #010101;
+    text-align: center;
+    padding-bottom: 0px;
+    line-height: 30px;
+  }
+  .bodybody .skill {
+    padding: 80px 0;
+    background-color: #bbd0e9;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .skill > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .skill > div h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+  .bodybody .skill > div > div {
+    padding-top: 25px;
+    display: grid;
+    gap: 15px 20px;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+  }
+  .bodybody .skill > div > div h3 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 20px;
+  }
+  .bodybody .skill > div > div h3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-top: 1px solid #000;
+    height: 1px;
+    width: 100%;
+  }
+  .bodybody .skill > div > div > div {
+    padding: 20px 25px;
+    font-size: 20px;
+    text-align: left;
+  }
+  .bodybody .skill > div > div .firstBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 1;
+  }
+  .bodybody .skill > div > div .firstBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .html {
+    padding-left: 5%;
+    padding-right: 30%;
+    width: 55%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .sass {
+    padding: 1% 5% 0 5%;
+    width: 25%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .jquery {
+    padding: 0 0 4% 10%;
+    width: 50%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .next {
+    padding: 0 5% 0 5%;
+    width: 35%;
+  }
+  .bodybody .skill > div > div .firstBox > div > div .react {
+    padding: 0 0 4% 10%;
+    width: 40%;
+  }
+  .bodybody .skill > div > div .secondBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 2;
+  }
+  .bodybody .skill > div > div .secondBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .secondBox > div > div .git {
+    padding-right: 50%;
+    padding-bottom: 8px;
+    width: 35%;
+  }
+  .bodybody .skill > div > div .secondBox > div > div .github {
+    width: 45%;
+  }
+  .bodybody .skill > div > div .thirdBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 4;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div .cloud {
+    padding-right: 20%;
+    padding-bottom: 10px;
+    width: 60%;
+  }
+  .bodybody .skill > div > div .thirdBox > div > div .vercel {
+    width: 50%;
+  }
+  .bodybody .skill > div > div .fourthBox {
+    background-color: #fff;
+    border-radius: 16px;
+    order: 3;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div {
+    padding-top: 20px;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div .zeplin {
+    padding-right: 20%;
+    padding-bottom: 3%;
+    width: 60%;
+  }
+  .bodybody .skill > div > div .fourthBox > div > div .figma {
+    width: 50%;
+  }
+  .bodybody .skill > div .card_small {
+    grid-row-end: span var(--card_small);
+  }
+  .bodybody .skill > div .card_medium {
+    grid-row-end: span var(--card_medium);
+  }
+  .bodybody .skill > div .card_large {
+    grid-row-end: span var(--card_large);
+  }
+  .bodybody .project {
+    padding: 80px 0px;
+    background-color: #eef2f5;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .bodybody .project > div {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bodybody .project > div .proH h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+  .bodybody .project > div .proContainer {
+    margin-top: 35px;
+    background-color: #fff;
+    border-radius: 16px;
+  }
+  .bodybody .project > div .proContainer > div {
+    padding: 20px 20px;
+  }
+  .bodybody .project > div .proContainer > div h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  .bodybody .project > div .proContainer > div .date {
+    padding-top: 7px;
+    font-size: 13px;
+  }
+  .bodybody .project > div .proContainer > div .pro {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft {
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg {
+    width: 100%;
+    height: 72%;
+    background-color: #fff;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftImg > img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .bodybody .project > div .proContainer > div .pro .proLeft .proLeftTxt {
+    display: none;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightHead {
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 8px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt {
+    font-size: 16px;
+    color: #555555;
+    text-align: left;
+    padding-bottom: 14px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightT .proRightTxt p {
+    margin: 0;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut {
+    align-items: none;
+    display: flex;
+    justify-content: none;
+    flex-direction: column;
+    font-size: 16px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a {
+    text-decoration: none;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a:visited {
+    color: black;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1 {
+    width: 100%;
+    background-color: #ddd;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut1:hover {
+    transition: 0.3s;
+    background-color: #aaa;
+    color: #fff;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2 {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #ddd;
+    padding: 2px 0;
+    border-radius: 5px;
+  }
+  .bodybody .project > div .proContainer > div .pro .proRight .proRightBut .proRightBut2:hover {
+    transition: 0.3s;
+    background-color: #aaa;
+    color: #fff;
+  }
+  .bodybody .footer {
+    background-color: #000;
+    color: #fafafa;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -108,7 +108,28 @@
                 </div>
                 <div class="rightBox">
                   <span>취&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 미</span>
-                  <p>준비중</p>
+                  <div>
+                    <div class="click" @click="openModal()">Click</div>
+                    <div class="video">
+                      <!-- <div class="closeBox"> -->
+                      <p @click="closeModal()">x</p>
+                      <!-- </div> -->
+                      <div class="videoBox">
+                        <video controls controlsList="nodownload">
+                          <source
+                            src="@/assets/video/video.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
+                      </div>
+                      <div class="videoTxt">
+                        베이스 기타를 몇년 동안 취미로 배우고 있는 중입니다.
+                        처음에는 진도가 별로 나가지 않아 힘들었지만, 꾸준히
+                        레슨과 연습을 지속해 나아지고 있습니다. 교회 청년부에서
+                        작은 헌신으로 하고 있습니다.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -380,6 +401,7 @@ import data from "@/assets/json/data.json";
 function contents() {
   const elMove = document.querySelectorAll(".moveHide");
   window.addEventListener("scroll", contents);
+
   elMove.forEach(function (cont, key) {
     if (
       // $(".moveHide").eq(key).offset().top - window.innerHeight * 0.8 <
@@ -450,9 +472,14 @@ export default {
         behavior: "smooth",
       });
     },
+    openModal() {
+      document.querySelector(".video").classList.add("modon");
+    },
+    closeModal() {
+      document.querySelector(".video").classList.remove("modon");
+    },
     handleScroll() {
       const scrollColor = document.querySelector(".headerBox");
-
       // if (window.pageYOffset > 900) {
       if (window.pageYOffset > (window.innerHeight * 3) / 5) {
         scrollColor.classList.add("black");
