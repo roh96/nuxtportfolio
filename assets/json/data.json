@@ -73,8 +73,8 @@
           "project_rightTxt3": "앞에 react를 이용한 페이지를 만들며 query로 각각의 정보를 넘겨 다르게 데이터를 출력하는 등 비슷한 구성을 가지고 있어 데이터를 이용하는 것은 문제가 없었지만, 카카오톡 api를 이용하는데 토큰을 가지고 오지 못해 로그인 상태를 잡아내지 못해 로컬스토리지에 정보를 남기는 등 문제 해결을 위해 많은 고민을 했던 시간이였습니다. 또한 mariaDB를 이용해 CRUD 기능을 이용한 페이지입니다."
         }
       ],
-      "project_url": "https://port-0-nextjsproject-3a9t2ble82ehp6.sel3.cloudtype.app/",
-      "git_url": "https://github.com/roh96/nextjsProject"
+      "project_url": "https://nextjs-project-2.vercel.app/",
+      "git_url": "https://github.com/roh96/nextjsProject-2"
     },
     {
       "projcet_code": "5",

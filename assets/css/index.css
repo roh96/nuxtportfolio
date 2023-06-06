@@ -15,28 +15,10 @@ body h2 {
   --card_large: 15;
 }
 
-@-webkit-keyframes openingChild {
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
 @keyframes openingChild {
   100% {
     opacity: 1;
     transform: translateY(0%);
-  }
-}
-@-webkit-keyframes bighide {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(2);
-    color: white;
   }
 }
 @keyframes bighide {
@@ -83,6 +65,7 @@ body h2 {
   display: flex;
 }
 .bodybody .headerBox > div p {
+  cursor: pointer;
   display: inline-block;
   margin-right: 60px;
 }
@@ -114,16 +97,13 @@ body h2 {
   transform: translateY(100%);
 }
 .bodybody .visualMain div p.visualMaintxt1 {
-  -webkit-animation: openingChild 1.5s 1s forwards;
-          animation: openingChild 1.5s 1s forwards;
+  animation: openingChild 1.5s 1s forwards;
 }
 .bodybody .visualMain div p.visualMaintxt2 {
-  -webkit-animation: openingChild 1.5s 2s forwards;
-          animation: openingChild 1.5s 2s forwards;
+  animation: openingChild 1.5s 2s forwards;
 }
 .bodybody .visualMain div p.visualMaintxt3 {
-  -webkit-animation: openingChild 1.5s 3s forwards;
-          animation: openingChild 1.5s 3s forwards;
+  animation: openingChild 1.5s 3s forwards;
 }
 .bodybody .about {
   padding-top: 100px;
@@ -194,10 +174,8 @@ body h2 {
 .bodybody .about > div .listBox ul li > div .rightBox > div .click:before {
   content: "Click";
   position: absolute;
-  -webkit-animation: bighide 2s ease-in-out infinite;
-          animation: bighide 2s ease-in-out infinite;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation: bighide 2s ease-in-out infinite;
+  animation-delay: 0.5s;
 }
 .bodybody .about > div .listBox ul li > div .rightBox > div .video {
   display: none;
@@ -457,6 +435,7 @@ body h2 {
 }
 .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a {
   text-decoration: none;
+  color: black;
 }
 .bodybody .project > div .proContainer > div .pro .proRight .proRightBut a:visited {
   color: black;
@@ -505,12 +484,6 @@ body h2 {
     --card_small: 10;
     --card_medium: 12;
     --card_large: 14;
-  }
-  @-webkit-keyframes openingChild {
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
   }
   @keyframes openingChild {
     100% {
@@ -583,16 +556,13 @@ body h2 {
     transform: translateY(100%);
   }
   .bodybody .visualMain div p.visualMaintxt1 {
-    -webkit-animation: openingChild 1.5s 1s forwards;
-            animation: openingChild 1.5s 1s forwards;
+    animation: openingChild 1.5s 1s forwards;
   }
   .bodybody .visualMain div p.visualMaintxt2 {
-    -webkit-animation: openingChild 1.5s 2s forwards;
-            animation: openingChild 1.5s 2s forwards;
+    animation: openingChild 1.5s 2s forwards;
   }
   .bodybody .visualMain div p.visualMaintxt3 {
-    -webkit-animation: openingChild 1.5s 3s forwards;
-            animation: openingChild 1.5s 3s forwards;
+    animation: openingChild 1.5s 3s forwards;
   }
   .bodybody .about {
     padding: 80px 0;
@@ -939,12 +909,6 @@ body h2 {
     --card_medium: 9;
     --card_large: 10;
   }
-  @-webkit-keyframes openingChild {
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
   @keyframes openingChild {
     100% {
       opacity: 1;
@@ -1018,16 +982,13 @@ body h2 {
     transform: translateY(100%);
   }
   .bodybody .visualMain div p.visualMaintxt1 {
-    -webkit-animation: openingChild 1.5s 1s forwards;
-            animation: openingChild 1.5s 1s forwards;
+    animation: openingChild 1.5s 1s forwards;
   }
   .bodybody .visualMain div p.visualMaintxt2 {
-    -webkit-animation: openingChild 1.5s 2s forwards;
-            animation: openingChild 1.5s 2s forwards;
+    animation: openingChild 1.5s 2s forwards;
   }
   .bodybody .visualMain div p.visualMaintxt3 {
-    -webkit-animation: openingChild 1.5s 3s forwards;
-            animation: openingChild 1.5s 3s forwards;
+    animation: openingChild 1.5s 3s forwards;
   }
   .bodybody .about {
     padding: 80px 0;
@@ -1372,12 +1333,6 @@ body h2 {
     --card_medium: 9;
     --card_large: 10;
   }
-  @-webkit-keyframes openingChild {
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
   @keyframes openingChild {
     100% {
       opacity: 1;
@@ -1461,16 +1416,13 @@ body h2 {
     transform: translateY(100%);
   }
   .bodybody .visualMain div p.visualMaintxt1 {
-    -webkit-animation: openingChild 1.5s 1s forwards;
-            animation: openingChild 1.5s 1s forwards;
+    animation: openingChild 1.5s 1s forwards;
   }
   .bodybody .visualMain div p.visualMaintxt2 {
-    -webkit-animation: openingChild 1.5s 2s forwards;
-            animation: openingChild 1.5s 2s forwards;
+    animation: openingChild 1.5s 2s forwards;
   }
   .bodybody .visualMain div p.visualMaintxt3 {
-    -webkit-animation: openingChild 1.5s 3s forwards;
-            animation: openingChild 1.5s 3s forwards;
+    animation: openingChild 1.5s 3s forwards;
   }
   .bodybody .about {
     padding: 80px 0;
